@@ -1,5 +1,8 @@
 import pandas as pd
 
+from PreferenceGenerator import PreferenceGenerator
+
+
 class FriendFinder:
     def run(self):
         data = self.load_data()
@@ -11,7 +14,10 @@ class FriendFinder:
         return csv
 
     def generate_preferences(self, data):
-        pass
+
+        pref_generator = PreferenceGenerator(data)
+        pref_generator.run()
 
     def pair_friends(self):
         pass
+
